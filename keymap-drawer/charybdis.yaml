@@ -255,70 +255,34 @@ layers:
 combos:
 - p: [11, 12]
   k: '&mkp LCLK'
-- p: [12, 13]
-  k: '&mkp RCLK'
-- p: [11, 12, 13]
-  k: '&mkp MCLK'
-- p: [16, 17]
-  k: '&mkp LCLK'
-- p: [17, 18]
-  k: '&mkp RCLK'
-- p: [16, 17, 18]
-  k: '&mkp MCLK'
-- p: [21, 22, 23]
-  k: SCROLL
-- p: [20, 21, 22]
-  k: SNIPE
-- p: [26, 27, 28]
-  k: SCROLL
-- p: [27, 28, 29]
-  k: SNIPE
-- p: [3, 4]
-  k: SNIPE
-- p: [33, 34]
-  k: DANGER
-- p: [2, 3]
-  k: (
-- p: [6, 7]
-  k: )
-- p: [0, 1]
-  k: '['
-- p: [8, 9]
-  k: ']'
-- p: [1, 2]
-  k: '{'
-- p: [7, 8]
-  k: '}'
-- p: [15, 16]
-  k: '&caps_word'
-- p: [0, 1, 2]
-  k: ESCAPE
-- p: [26, 27]
-  k: ESCAPE
-- p: [27, 28]
-  k: TAB
-- p: [28, 29]
-  k: '`'
-- p: [20, 21]
-  k: Gui+Z
-- p: [23, 24]
-  k: Sft+Gui+Z
+  l: [BASE]
 - p: [21, 22]
-  k: Gui+C
-- p: [22, 23]
-  k: Gui+V
-- p: [19, 18]
-  k: ''''
-- p: [3, 13]
-  k: _
-- p: [6, 16]
-  k: '-'
-- p: [7, 17]
-  k: +
-- p: [8, 18]
-  k: '='
-- p: [0, 5]
+  k: '&mkp RCLK'
+  l: [BASE]
+- p: [12, 17]
+  k: CAPSLOCK
+  l: [BASE]
+- p: [0, 4]
   k: '&studio_unlock'
-- p: [4, 5]
-  k: BT CLR
+  l: [BASE]
+- p: [23, 24]
+  k: DEL
+  l: [BASE]
+- p: [7, 8]
+  k: Gui+E
+  l: [BASE]
+- p: [20, 21]
+  k: Alt+F4
+  l: [BASE]
+- p: [28, 29]
+  k: Alt+F4
+  l: [BASE]
+- p: [13, 16]
+  k: Gui+SPACE
+  l: [BASE]
+- p: [17, 18]
+  k: Alt+LEFT
+  l: [NUMS]
+- p: [27, 28]
+  k: Alt+UP
   l: [NUMS]
