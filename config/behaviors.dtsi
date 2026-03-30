@@ -4,38 +4,60 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right-hand keys
 #define KEYS_T                 LH1 LH0 RH0 RH1                              // thumb keys
 
-#define HM_TAPPING_TERM 160       // max hold time (ms) before key becomes a modifier
-#define HM_TAPPING_TERM_FAST 140  // shorter tapping term for index/pinky (faster fingers)
-#define HM_PRIOR_IDLE 120         // must be idle this long before a hold-tap can become a mod (prevents misfires during fast typing)
+#define HM_TAPPING_TERM 280       // max hold time (ms) before key becomes a modifier
+#define HM_TAPPING_TERM_FAST 175  // shorter tapping term for index/pinky (faster fingers)
+#define HM_PRIOR_IDLE 150         // must be idle this long before a hold-tap can become a mod (prevents misfires during fast typing)
 
 / {
     behaviors {
-        hm_l: homerow_mods_left {
+
+        // Home row mods - Left hand
+        hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-
             flavor = "balanced";
+            require-prior-idle-ms = <HM_PRIOR_IDLE>;
             tapping-term-ms = <HM_TAPPING_TERM>;
             quick-tap-ms = <HM_TAPPING_TERM_FAST>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+            bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R KEYS_T>;
             hold-trigger-on-release;
         };
 
-        hm_r: homerow_mods_right {
+        // Home row mods - Right hand
+        hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-
             flavor = "balanced";
+            require-prior-idle-ms = <HM_PRIOR_IDLE>;
             tapping-term-ms = <HM_TAPPING_TERM>;
             quick-tap-ms = <HM_TAPPING_TERM_FAST>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+            bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L KEYS_T>;
             hold-trigger-on-release;
         };
 
+        // Layer-tap: hold = mo (momentary layer), tap = kp (keypress)
+        blt: blt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <300>;
+            require-prior-idle-ms = <100>;
+            bindings = <&mo>, <&kp>;
+        };
+
+        // Hold-tap: hold = mo (momentary), tap = tog (toggle)
+        mo_tog: mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&tog>;
+        };
+
+        // Scroll encoder for Charybdis trackball
         scroll_encoder: scroll_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
