@@ -8,3 +8,7 @@
 #define POI  5
 #define SCR  6
 #define SNI  7
+ 
+// Aliases for zmk-charybdis module compatibility
+#define SCROLL SCR
+#define SNIPE  SNI
