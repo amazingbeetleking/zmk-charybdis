@@ -11,16 +11,16 @@ layers:
   - I
   - O
   - P
-  - '&hm_l LCTRL A'
-  - '&hm_l LALT S'
-  - '&hm_l LGUI D'
-  - '&hm_l LSHFT F'
+  - {t: A, h: LCTRL}
+  - {t: S, h: LALT}
+  - {t: D, h: LGUI}
+  - {t: F, h: LSHFT}
   - G
   - H
-  - '&hm_r RSHFT J'
-  - '&hm_r RGUI K'
-  - '&hm_r RALT L'
-  - '&hm_r RCTRL SEMI'
+  - {t: J, h: RSHFT}
+  - {t: K, h: RGUI}
+  - {t: L, h: RALT}
+  - {t: ;, h: RCTRL}
   - Z
   - X
   - C
