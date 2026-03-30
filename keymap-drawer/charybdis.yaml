@@ -11,16 +11,16 @@ layers:
   - I
   - O
   - P
-  - {t: A, h: LCTRL}
-  - {t: S, h: LALT}
-  - {t: D, h: LGUI}
-  - {t: F, h: LSHFT}
+  - '&hm_l LCTRL A'
+  - '&hm_l LALT S'
+  - '&hm_l LGUI D'
+  - '&hm_l LSHFT F'
   - G
   - H
-  - {t: J, h: RSHFT}
-  - {t: K, h: RGUI}
-  - {t: L, h: RALT}
-  - {t: ;, h: RCTRL}
+  - '&hm_r RSHFT J'
+  - '&hm_r RGUI K'
+  - '&hm_r RALT L'
+  - '&hm_r RCTRL SEMI'
   - Z
   - X
   - C
@@ -252,3 +252,37 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+combos:
+- p: [11, 12]
+  k: '&mkp LCLK'
+  l: [BASE]
+- p: [21, 22]
+  k: '&mkp RCLK'
+  l: [BASE]
+- p: [12, 17]
+  k: CAPSLOCK
+  l: [BASE]
+- p: [0, 4]
+  k: '&studio_unlock'
+  l: [BASE]
+- p: [23, 24]
+  k: DEL
+  l: [BASE]
+- p: [7, 8]
+  k: Gui+E
+  l: [BASE]
+- p: [20, 21]
+  k: Alt+F4
+  l: [BASE]
+- p: [28, 29]
+  k: Alt+F4
+  l: [BASE]
+- p: [13, 16]
+  k: Gui+SPACE
+  l: [BASE]
+- p: [17, 18]
+  k: Alt+LEFT
+  l: [NUMS]
+- p: [27, 28]
+  k: Alt+UP
+  l: [NUMS]
