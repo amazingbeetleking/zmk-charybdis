@@ -86,7 +86,7 @@
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&kp LA(LEFT)>;
             key-positions = <17 18>;
-            layers = <NUMS>;
+            layers = <NAVI>;
         };
 
         combo_up_folder {
@@ -94,7 +94,7 @@
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&kp LA(UP)>;
             key-positions = <27 28>;
-            layers = <NUMS>;
+            layers = <NAVI>;
         };
     };
 };
